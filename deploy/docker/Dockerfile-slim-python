@@ -42,7 +42,7 @@ WORKDIR /sdk/python
 RUN cat setup.py
 RUN pip wheel .
 
-FROM python:3.12-slim-bookworm
+FROM python:3.14.1-slim-bookworm
 
 COPY --from=python-builder /sdk/python /sdk/python
 WORKDIR /sdk/python
